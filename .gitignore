@@ -1,2 +1,7 @@
+rilaws\__pycache__\
+rilaws\spiders\__pycache__\
+
+data\
+
 *.log
 *.json
