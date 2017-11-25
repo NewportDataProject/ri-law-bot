@@ -29,11 +29,14 @@ class LawSpider(scrapy.Spider):
     def parse_section(self, response):
         # extract the information from each section
         section_id = response.css('title::text').extract_first()
+        section_title = response.css('h1::text').extract()
+        section_chapter = response.css('h2::text').extract()
+        section_section = response.css('h3::text').extract_first()
         section_subject = response.css('body p b::text').extract_first()
         section_text = response.css('body p::text').extract()
         section_history = response.css('body history::text').extract()[1]
         # print(section_id)
-        section = Section(id=section_id, subject=section_subject, history=section_history, text=section_text)
+        section = Section(id=section_id, title=section_title, chapter=section_chapter, section=section_section, subject=section_subject, history=section_history, text=section_text)
         yield section
     #     yield {
     #             'id': section_id,

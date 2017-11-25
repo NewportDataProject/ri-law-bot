@@ -16,6 +16,9 @@ class RilawsItem(scrapy.Item):
 
 class Section(scrapy.Item):
     id = scrapy.Field()
+    title = scrapy.Field()
+    chapter = scrapy.Field()
+    section = scrapy.Field()
     subject = scrapy.Field()
     history = scrapy.Field()
     text = scrapy.Field()
