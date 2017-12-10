@@ -10,8 +10,8 @@ class LawSpider(scrapy.Spider):
     def parse(self, response):
         # get links to titles
         titles = response.css('table a.homeLinks::attr(href)').extract()
-        # limit breadth for debugging:
-        for title in titles[0:2]:
+        # NOTE: this will crawl everything. For testing, use a slice of the list
+        for title in titles:
             yield response.follow(title, callback=self.parse_title)
 
     def parse_title(self, response):

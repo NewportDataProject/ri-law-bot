@@ -1,7 +1,8 @@
-rilaws\__pycache__\
-rilaws\spiders\__pycache__\
+\rilaws\__pycache__\
+\rilaws\spiders\__pycache__\
 
-data\
+.data
 
 *.log
 *.json
+*.pyc
