@@ -1,5 +1,5 @@
 # Rhode Island laws-bot
-This goal of this project is to create a web scraper to access the RI General Statutes ([webserver.rilin.state.ri.us/Statutes/](webserver.rilin.state.ri.us/Statutes/)) and convert the HTML into structured data files for future use and analysis.
+This goal of this project is to create a web scraper to access the RI General Statutes ([webserver.rilin.state.ri.us/Statutes/](http://webserver.rilin.state.ri.us/Statutes/)) and convert the HTML into structured data files for future use and analysis.
 
 ## Usage
 In the project folder, run `scrapy crawl laws -o <output_file>.json`.
